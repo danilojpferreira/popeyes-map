@@ -1,0 +1,73 @@
+.maps {
+  &_card {
+    &_header {
+      display: flex;
+      flex-direction: row;
+      width: 100%;
+      justify-content: space-between;
+      &_back{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap:8px;
+        cursor: pointer;
+      }
+      &_picker {
+        width: 150px;
+      }
+    }
+  }
+  &_container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &_footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+    width: 100%;
+    &_button{
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
+
+    &_travel-time {
+      color: #7E459B;
+      font-weight: 100;
+      font-size: 14px;
+    }
+  }
+}
+
+
+.blob {
+	border-radius: 50%;
+}
+
+.blob {
+	box-shadow: 0 0 0 0 #7E459B;
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+    background-color: #7E459BA0;
+		box-shadow: 0 0 0 0 #7E459BA0;
+	}
+
+	70% {
+    background-color: rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+	}
+
+	100% {
+    background-color: rgba(0, 0, 0, 0);
+		box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+	}
+}

@@ -1,0 +1,20 @@
+.card {
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, 0.06), 0 4px 5px 0 rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  background-color: #ffffff;
+  height: fit-content;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: space-between;
+  align-items: center;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &:hover{
+    border: solid purple 1px;
+  }
+}

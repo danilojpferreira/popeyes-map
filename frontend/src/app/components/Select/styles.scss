@@ -1,0 +1,22 @@
+.MuiFormLabel-root.Mui-focused {
+  color: purple !important;
+}
+
+.MuiFilledInput-underline:after {
+  border-bottom: 2px solid purple !important;
+}
+.MuiFilledInput-root {
+  background-color: #ffffff !important;
+}
+.select {
+  width: inherit;
+  &_form-control {
+    width: 100%;
+  }
+  &_title{
+    color: #2e3451;
+    font-size: 32px;
+    margin: 0px;
+    padding: 8px 0 32px 0;
+  }
+}

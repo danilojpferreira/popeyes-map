@@ -1,0 +1,5 @@
+export { default as ArrowLeft } from './ArrowLeft.svg'
+export { default as ArrowRight } from './ArrowRight.svg'
+export { default as Pause } from './Pause.svg'
+export { default as Play } from './Play.svg'
+export { default as Loop } from './Loop.svg'
