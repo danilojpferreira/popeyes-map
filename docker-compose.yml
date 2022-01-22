@@ -1,0 +1,32 @@
+version: '2'
+services:
+  popeyes_fe:
+    build: ./frontend
+    restart: always
+    ports:
+      - '8080:8080'
+    depends_on:
+      - popeyes_be
+  popeyes_be:
+    build: ./backend
+    restart: always
+    ports:
+      - '3000:3000'
+    depends_on:
+      - popeyes_mongo
+    links:
+      - popeyes_mongo
+    environment:
+      - MONGO_URI=mongodb://popeyes_mongo:27017/popeyes/
+  popeyes_mongo:
+    image: mongo
+    restart: always
+    volumes:
+            - ./database:/app
+    command: mongod --noauth
+    ports:
+      - '27017:27017'
+  mongo_data:
+   build: ./database
+   links:
+    - popeyes_mongo

@@ -1,7 +1,7 @@
 const WebSocket = require("ws");
 const MongoClient = require("mongodb").MongoClient;
 const client = new MongoClient(
-  process.env.MONGO_URL || "mongodb://127.0.0.1:27017/",
+  process.env.MONGO_URI || "mongodb://127.0.0.1:27017/",
   {
     useNewUrlParser: true,
   }
