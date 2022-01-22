@@ -17,7 +17,7 @@ const App = (): JSX.Element => (
         <Route path="/" element={<Main />} />
         <Route path="/maps/:map/:vehicle/:reverse" element={<Maps />} />
         <Route path="/maps/:map/:vehicle" element={<Maps />} />
-        <Route path="/404" element={<Error error={404} />} />
+        <Route path="/404" element={<Error />} />
       </Routes>
       <ToastContainer autoClose={3000} />
     </Provider>

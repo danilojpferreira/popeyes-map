@@ -1,5 +1,5 @@
 {
-  "name": "popeyes-map",
+  "name": "popeyes-map-frontend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -15,7 +15,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GNU",
   "dependencies": {
     "@material-ui/core": "^4.12.3",
     "css-loader": "^6.5.1",

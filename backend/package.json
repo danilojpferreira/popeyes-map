@@ -1,5 +1,5 @@
 {
-  "name": "popeyes-server",
+  "name": "popeyes-map-backend",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,7 +8,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "GNU",
   "dependencies": {
     "cors": "^2.8.5",
     "dotenv": "^10.0.0",

@@ -2,9 +2,7 @@
 import React, { memo, useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 
-import { Button, Card } from '../../components'
-import Select from '../../components/Select'
-import Typing from '../../components/Typing'
+import { Button, Card, Select, Typing } from '../../components'
 import { ArrowRight } from '../../../assets/icons'
 import './styles.scss'
 

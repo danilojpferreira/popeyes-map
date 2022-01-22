@@ -1,17 +1,12 @@
-/* eslint-disable no-console */
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-/* eslint-disable @typescript-eslint/no-shadow */
-/* eslint-disable no-restricted-syntax */
-
 import { Slider } from '@material-ui/core'
 import { useDispatch } from 'react-redux'
 import { useNavigate, useParams } from 'react-router-dom'
 import React, { memo, useCallback, useEffect, useState } from 'react'
 import ReactMapGL, { Source, Layer } from 'react-map-gl'
 import useWebSocket from 'react-use-websocket'
-import { Card } from '../../components'
+import { Card, Select } from '../../components'
 import { setLoading } from '../../store/actions/configurationsActions'
-import Select from '../../components/Select'
 import './styles.scss'
 import 'mapbox-gl/dist/mapbox-gl.css'
 import { formatMinutes } from '../../utils/utils'
@@ -39,6 +34,7 @@ const Maps = (): JSX.Element => {
 
   // connect with server
   const { lastJsonMessage, sendMessage } = useWebSocket(`ws://${WS_SERVER}`, {
+    // eslint-disable-next-line no-console
     onError: console.error,
     shouldReconnect: () => true,
     reconnectInterval: 3000,
@@ -73,11 +69,11 @@ const Maps = (): JSX.Element => {
 
   // send message when play, speed or map change
   useEffect(() => {
-    const id = Math.random() * 100000
-    setId(id)
+    const newId = Math.random() * 100000
+    setId(newId)
     sendMessage(
       JSON.stringify({
-        id,
+        id: newId,
         map,
         speed,
         play,
